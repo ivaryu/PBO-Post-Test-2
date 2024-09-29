@@ -14,17 +14,32 @@ import java.util.ArrayList;
  */
 public class Management {
     
+    private String adminName;
+    private int adminPass;
     private ArrayList<Car> carList;
     private ArrayList<Customer> custList;
+    private ArrayList<Admin> adminList;
     
     public Management(){
         this.carList = new ArrayList();
         this.custList = new ArrayList();
+        this.adminList = new ArrayList();
+    }
+    
+    public void AdminList(Admin admin){
+        adminList.add(admin);
+    }
+    
+    public Admin findAdmin(String name, int pass){
+        for (Admin admin : adminList){
+            if (admin.getAdmNm().equalsIgnoreCase(name) && admin.getAdmPs() == pass){
+                return admin;
+            }
+        } return null;
     }
     
     public void addCarToList(Car car){
         carList.add(car);
-        System.out.println("Mobil " + car + " Berhasil Ditambahkan ke Daftar Mobil!");
     }
     
     public void updateCarPrice(String carName, double newPrice){
@@ -81,7 +96,6 @@ public class Management {
     
     public void addCustToList(Customer customer){
         custList.add(customer);
-        System.out.println("Customer " + customer.getName() + " Berhasil DItambahkan!" );
     }
     
     public void showCustomerList(){
