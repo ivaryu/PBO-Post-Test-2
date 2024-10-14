@@ -12,6 +12,8 @@
 3. Keluar
 Pilih akses:
 ```
+Ini adalah menu utama kuliah dari program rental. Terdapat memiliki opsi untuk login admin, customer, ataupun langsung keluar program.
+
 ## Admin
 ### 1. Login Admin
 ```
@@ -23,6 +25,7 @@ Masukkan Nama: Windo
 Masukkan Password: 200512
 Login berhasil! Selamat datang, Windo
 ```
+Jika pengguna memilih opsi login sebagai admin, maka terdapat menu login dan juga keluar program. Jika menu login, pengguna harus memasukkan Nama dan Password yang telah terdata di program.
 
 ### 2. Menu Admin
 ```
