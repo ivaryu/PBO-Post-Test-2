@@ -3,7 +3,7 @@
 ### Nama: Muhammad Faisal Ramdhani
 ### NIM: 2309116051
 
-## Post Test 1 
+## Post Test 2
 ### Menu Utama Program
 ```
 ===== AJ Travel Rental Mobil =====
