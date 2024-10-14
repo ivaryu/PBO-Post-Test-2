@@ -3,41 +3,35 @@
  */
 
 package rental;
-
+import rental.Customer;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 /**
  *
  * @author Zonaats
  */
 public class Car{
     
-    private String carName;
-    private int carCode;
-    private boolean carStatus = true;
-    private double pricePerDay;
-    
     public static int totalCar = 0;
+    public String carName;
+    public int carCode;
+    public boolean carStatus = true;
+    public double pricePerDay;
+    public LocalDateTime transactionDate;
+    public Customer customer;
     
     public Car(String newName, double newPrice){
         this.carName = newName;
         this.carStatus = true;
         this.pricePerDay = newPrice;
+        this.carCode = totalCar;
         totalCar++;
     }
     
-    public String getCarName(){
-        return carName;
-    }
-    
-    public boolean getCarStatus(){
-        return carStatus;
-    }
-    
-    public double getCarPrice(){
-        return pricePerDay;
-    }
-    
-    public void setCarPrice(double newPrice){
-        this.pricePerDay = newPrice;
+    public void readInfo(){
+        System.out.println("ID Kendaraan: " + this.carCode);
+        System.out.println("Mobil: " + this.carName);
+        System.out.println("Harga per hari: " + this.pricePerDay);
     }
     
     public void rentingCar(){
@@ -52,9 +46,29 @@ public class Car{
         }
     }
     
+    public String getCarName(){
+        return carName;
+    }
     
+    public void setCarName(String newName){
+        this.carName = newName;
+    }
     
+    public boolean getCarStatus(){
+        return carStatus;
+    }
     
+    public double getCarPrice(){
+        return pricePerDay;
+    }
+    
+    public void setCarPrice(double newPrice){
+        this.pricePerDay = newPrice;
+    }
+
+    public int getCarCode() {
+        return carCode;
+    }
     
     
 }

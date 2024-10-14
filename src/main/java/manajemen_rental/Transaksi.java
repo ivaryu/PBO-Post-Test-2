@@ -11,7 +11,7 @@
      *
      * @author Zonaats
      */
-    public class Transaksi {
+    public final class Transaksi {
         private Car car;
         private Customer customer;
         private int days;
